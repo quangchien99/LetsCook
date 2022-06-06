@@ -18,12 +18,12 @@ class RecipeNetworkMapper : EntityMapper<RecipeNetworkEntity, Recipe> {
             publisher = entity.publisher,
             featuredImage = entity.featuredImage,
             rating = entity.rating,
-            sourceUrl = entity.sourceUrl,
+            referenceUrl = entity.sourceUrl,
             description = entity.description,
             cookingInstruction = entity.cookingInstruction,
             ingredients = entity.ingredients,
-            dateAdded = entity.dateAdded,
-            dateUpdated = entity.dateUpdated
+            dateCreated = entity.dateAdded,
+            dateLastModified = entity.dateUpdated
         )
 
     override fun mapToEntity(domainModel: Recipe) = RecipeNetworkEntity(
@@ -32,12 +32,12 @@ class RecipeNetworkMapper : EntityMapper<RecipeNetworkEntity, Recipe> {
         publisher = domainModel.publisher,
         featuredImage = domainModel.featuredImage,
         rating = domainModel.rating,
-        sourceUrl = domainModel.sourceUrl,
+        sourceUrl = domainModel.referenceUrl,
         description = domainModel.description,
         cookingInstruction = domainModel.cookingInstruction,
         ingredients = domainModel.ingredients,
-        dateAdded = domainModel.dateAdded,
-        dateUpdated = domainModel.dateUpdated
+        dateAdded = domainModel.dateCreated,
+        dateUpdated = domainModel.dateLastModified
     )
 
     /**
