@@ -3,7 +3,7 @@
  */
 package com.example.letscook.network
 
-import com.example.letscook.network.model.RecipeNetworkEntity
+import com.example.letscook.network.model.RecipeDto
 import com.example.letscook.network.responses.RecipeResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -34,11 +34,11 @@ interface RecipeService {
      * get  recipe from food2fork api by id.
      * @param token the Authorization of the api.
      * @param id the id of the recipe need to get.
-     * @return [RecipeNetworkEntity] RecipeNetworkEntity
+     * @return [RecipeDto] RecipeNetworkEntity
      */
     @GET("get")
     suspend fun get(
         @Header("Authorization") token: String,
         @Query("id") id: Int
-    ): RecipeNetworkEntity
+    ): RecipeDto
 }

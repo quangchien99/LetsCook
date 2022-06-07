@@ -3,16 +3,16 @@
  */
 package com.example.letscook.network.responses
 
-import com.example.letscook.network.model.RecipeNetworkEntity
+import com.example.letscook.network.model.RecipeDto
 import com.google.gson.annotations.SerializedName
 
 /**
  * Define the Response Recipe from Network.
  * @property count the number of recipes.
  * @property previous the previous search.
- * @property recipes list of [RecipeNetworkEntity].
+ * @property recipes list of [RecipeDto].
  */
-class RecipeResponse(
+data class RecipeResponse(
     @SerializedName("count")
     var count: Int,
 
@@ -20,5 +20,5 @@ class RecipeResponse(
     var previous: String? = null,
 
     @SerializedName("results")
-    var recipes: List<RecipeNetworkEntity>
+    var recipes: List<RecipeDto>
 )
