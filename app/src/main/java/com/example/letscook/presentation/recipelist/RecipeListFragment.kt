@@ -40,7 +40,7 @@ class RecipeListFragment : Fragment() {
                     Spacer(modifier = Modifier.padding(10.dp))
                     Button(
                         onClick = {
-                            //implement later
+                            findNavController().navigate(R.id.viewRecipe)
                         }
                     ) {
                         Text(text = "TO RECIPE FRAGMENT")
