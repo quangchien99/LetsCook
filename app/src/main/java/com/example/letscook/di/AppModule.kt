@@ -4,7 +4,7 @@
 package com.example.letscook.di
 
 import android.content.Context
-import com.example.letscook.BaseApplication
+import com.example.letscook.presentation.BaseApplication
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
